@@ -2,13 +2,12 @@
 # This is provided for illustration purposes only, for full details 
 # please consult the product documentation: https://docs.appdynamics.com/
 
-FROM ubuntu:14.04
+FROM centos:latest
 
 # Install required packages
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y unzip && \
-    apt-get clean
+RUN yum update -y
+RUN yum install -y unzip
+RUN yum -y install java-1.8.0-openjdk
 
 # Install AppDynamics Machine Agent
 ENV MACHINE_AGENT_HOME /opt/appdynamics/machine-agent/

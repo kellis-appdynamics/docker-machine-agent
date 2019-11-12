@@ -6,11 +6,11 @@ services:
     container_name: docker-machine-agent
     image: appdynamics/docker-machine-agent
     environment:
-      - APPD_HOST=
-      - APPD_PORT=
-      - APPD_ACCOUNT_NAME=
-      - APPD_ACCESS_KEY=
-      - APPD_SSL_ENABLED=
+      - APPD_HOST=172.17.0.1
+      - APPD_PORT=8090
+      - APPD_ACCOUNT_NAME=customer1
+      - APPD_ACCESS_KEY=1141795f-a699-4750-9b4b-b713eb0a8eca
+      - APPD_SSL_ENABLED=false
     volumes:
       - /:/hostroot:ro
       - /var/run/docker.sock:/var/run/docker.sock
